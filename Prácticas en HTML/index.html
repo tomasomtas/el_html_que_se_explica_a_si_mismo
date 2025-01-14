@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <title>El HTML que se explica a sí mismo</title>
+
+    <link rel="icon" href="html-5.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="esta página trata sobre contenido HTML5 y enseñanza del mismo">
+    <meta name="keywords" content="programación,pc,computación,W3C,Mozilla,código">
+    <meta name="author" content="Ing.Tomas">
+
+    <meta property="og:title" content="Título de la página">
+    <meta property="og:description" content="Una breve descripción de la página">
+    <meta property="og:image" content="https://example.com/imagen.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Título para Twitter">
+    <meta name="twitter:description" content="Descripción para Twitter">
+    <meta name="twitter:image" content="https://example.com/imagen-twitter.jpg">
+    <meta name="twitter:site" content="@TuCuentaDeTwitter">
+
+</head>
+
+<body>
+<header>
+    <h1>😊 El HTML que se explica a sí mismo 😊</h1>
+    <h2>En este documento HTML, aprendemos todo sobre este lenguaje.</h2>
+    <nav id="menu">
+        <ol>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#estructura&semantica">Estructura básica de HTML</a></li>
+            <li><a href="#metadatos">Metadatos</a></li>
+            <li><a href="#texto">Etiquetas para texto</a></li>
+            <li><a href="#enlaces">Enlaces e imágenes</a></li>
+            <li><a href="#listas">Listas</a></li>
+            <li><a href="#formularios">Formularios</a></li>
+            <li><a href="#tablas">Tablas</a></li>
+            <li><a href="#multimedia">Contenido multimedia</a></li>
+            <li><a href="#accesibilidad">Accesibilidad en HTML</a></li>
+            <li><a href="#contenidoextra">Contenido extra HTML5</a></li>
+        </ol>
+    </nav>
+</header>
+
+<main>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <article id="introduccion">
+        <h2>Introducción</h2>
+        <p>
+            HTML (HyperText Markup Language) es el lenguaje estándar utilizado para estructurar el contenido de las páginas web. Fue desarrollado para permitir la conexión entre documentos mediante enlaces (hipervínculos), lo que dio lugar a la creación de la World Wide Web tal como la conocemos hoy en día. Su principal función es organizar y presentar información de manera estructurada, utilizando etiquetas que determinan la semántica y jerarquía del contenido.
+        </p>
+        <p>
+            HTML por sí solo no es un lenguaje de programación; es un lenguaje de marcado. Esto significa que su propósito no es ejecutar lógica o algoritmos, sino definir la estructura de un documento. Por ejemplo, con HTML puedes indicar qué partes de un texto son títulos, párrafos, listas, tablas, imágenes o enlaces.
+        </p>
+        <p>
+            Este lenguaje es la base del desarrollo web frontend, que es la parte visible e interactiva de un sitio web. Sin embargo, HTML no trabaja de forma aislada. Suele estar estrechamente integrado con otras tecnologías clave:
+        </p>
+        <ul>
+            <li>
+                <strong>CSS (Cascading Style Sheets):</strong> Utilizado para dar estilo y diseño a las páginas web. Mientras que HTML define el contenido y su estructura, CSS se encarga de cómo se ve, controlando colores, fuentes, márgenes, posicionamiento, animaciones y más.
+            </li>
+            <li>
+                <strong>JavaScript:</strong> Lenguaje de programación que añade interactividad y dinamismo a las páginas. Por ejemplo, permite crear menús desplegables, formularios interactivos, efectos visuales y muchas otras funcionalidades avanzadas.
+            </li>
+        </ul>
+        <p>
+            Además de CSS y JavaScript, HTML también se asocia con tecnologías y conceptos modernos que amplían sus capacidades:
+        </p>
+        <ul>
+            <li>
+                <strong>Frameworks de frontend:</strong> Librerías como React, Angular o Vue.js permiten crear interfaces de usuario complejas basadas en componentes, combinando HTML, CSS y JavaScript.
+            </li>
+            <li>
+                <strong>APIs web:</strong> HTML puede interactuar con APIs para integrar contenido dinámico, como mapas, datos en tiempo real o notificaciones.
+            </li>
+            <li>
+                <strong>Backend y bases de datos:</strong> Aunque HTML está en el lado del cliente (frontend), se combina con tecnologías backend como PHP, Python, Node.js y bases de datos (MySQL, MongoDB) para generar contenido dinámico y personalizado.
+            </li>
+        </ul>
+        <p>
+            HTML ha evolucionado significativamente desde su creación. Actualmente, la versión más reciente es HTML5, que introdujo nuevas etiquetas semánticas como <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> y <code>&lt;aside&gt;</code>, además de soporte nativo para audio, video y gráficos vectoriales mediante <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code> y <code>&lt;canvas&gt;</code>.
+        </p>
+        <p>
+            En resumen, HTML es la piedra angular del desarrollo web. Define la estructura básica de los sitios y sirve como base para integrar estilos, interactividad y datos dinámicos, permitiendo la creación de experiencias web modernas, accesibles y atractivas.
+        </p>
+        
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </article>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <article id="estructura&semantica">
+        <h2>Estructura básica de HTML</h2>
+        <p>
+            Un documento HTML comienza con la declaración <code>&lt;!DOCTYPE html&gt;</code>, que indica al navegador que el documento está utilizando HTML5, la versión más moderna del lenguaje. A continuación, se estructura mediante las etiquetas principales <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>.
+        </p>
+        <p>
+            Para crear y editar código HTML, necesitas un editor de texto. Algunos de los editores más populares para programadores son:
+        </p>
+        <ul>
+            <li>
+                <strong>Visual Studio Code (VSC):</strong> Un editor gratuito y muy popular que incluye herramientas útiles como resaltado de sintaxis, sugerencias de código y extensiones para trabajar con HTML, CSS, JavaScript y más.
+            </li>
+            <li>
+                <strong>Sublime Text:</strong> Un editor ligero y rápido, ideal para escribir código HTML y otros lenguajes. Ofrece resaltado de sintaxis y múltiples herramientas de edición.
+            </li>
+            <li>
+                <strong>Otros editores:</strong> También puedes usar herramientas como Notepad++, Atom o incluso editores en línea como CodePen o JSFiddle para probar y compartir tu código.
+            </li>
+        </ul>
+        <p>
+            Los archivos HTML tienen la extensión <code>.html</code>. Una vez creado el archivo, puedes abrirlo en cualquier navegador web para visualizar cómo se renderiza el contenido.El primer paso para crear tu proyecto en HTML5, será
+            crear un archivo index.html desde el éditor de código. Para ello, una vez instalado el mismo, ve a FILE->NEW FILE->(aquí debes nombrar a tu primer archivo "index.html" y lo guardas en una carpeta en donde tendrás tu proyecto).
+        </p>
+        
+        <h3>Reglas semánticas de HTML</h3>
+        <p>
+            La semántica en HTML se refiere a usar las etiquetas correctas para describir el propósito y el significado del contenido. Esto mejora la accesibilidad, el SEO (optimización para motores de búsqueda) y la claridad del código. Algunas reglas importantes son:
+        </p>
+        <ul>
+            <li>
+                Usa <code>&lt;header&gt;</code> para encabezados principales o de secciones.
+            </li>
+            <li>
+                Usa <code>&lt;main&gt;</code> para el contenido principal del documento, asegurándote de que sea único en cada página.
+            </li>
+            <li>
+                Organiza los artículos independientes o bloques de contenido usando <code>&lt;article&gt;</code>.
+            </li>
+            <li>
+                Usa <code>&lt;section&gt;</code> para agrupar contenido relacionado dentro de una página o artículo.
+            </li>
+            <li>
+                Para contenido adicional o complementario, como barras laterales, utiliza <code>&lt;aside&gt;</code>.
+            </li>
+            <li>
+                Usa <code>&lt;footer&gt;</code> para contenido al final de una página o sección, como derechos de autor o enlaces importantes.
+            </li>
+        </ul>
+        
+        <h3>Descripción de las etiquetas semánticas más importantes</h3>
+        <ul>
+            <li>
+                <strong>&lt;header&gt;:</strong> Representa un encabezado para un documento o sección. Puede contener títulos, logotipos, menús de navegación o cualquier otro contenido introductorio.
+                <pre><code>&lt;header&gt;
+            &lt;h1&gt;Título principal&lt;/h1&gt;
+            &lt;nav&gt;...&lt;/nav&gt;
+        &lt;/header&gt;</code></pre>
+            </li>
+            <li>
+                <strong>&lt;nav&gt;:</strong> Define una sección de navegación con enlaces a otras partes del sitio o página.
+                <pre><code>&lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;</code></pre>
+            </li>
+            <li>
+                <strong>&lt;main&gt;:</strong> Indica el contenido principal de la página. Solo debe haber un <code>&lt;main&gt;</code> por documento.
+                <pre><code>&lt;main&gt;
+            &lt;article&gt;...&lt;/article&gt;
+            &lt;section&gt;...&lt;/section&gt;
+        &lt;/main&gt;</code></pre>
+            </li>
+            <li>
+                <strong>&lt;article&gt;:</strong> Representa contenido independiente, como un artículo de blog, un comentario o un elemento en un feed de noticias.
+                <pre><code>&lt;article&gt;
+            &lt;h2&gt;Título del artículo&lt;/h2&gt;
+            &lt;p&gt;Contenido del artículo.&lt;/p&gt;
+        &lt;/article&gt;</code></pre>
+            </li>
+            <li>
+                <strong>&lt;section&gt;:</strong> Agrupa contenido temáticamente relacionado dentro de una página o artículo.
+                <pre><code>&lt;section&gt;
+            &lt;h2&gt;Subtítulo de la sección&lt;/h2&gt;
+            &lt;p&gt;Contenido relacionado.&lt;/p&gt;
+        &lt;/section&gt;</code></pre>
+            </li>
+            <li>
+                <strong>&lt;aside&gt;:</strong> Contiene contenido adicional o complementario, como barras laterales, anuncios o widgets.
+                <pre><code>&lt;aside&gt;
+            &lt;p&gt;Enlaces relacionados o información extra.&lt;/p&gt;
+        &lt;/aside&gt;</code></pre>
+            </li>
+            <li>
+                <strong>&lt;footer&gt;:</strong> Define el pie de página de un documento o sección. Puede incluir información de contacto, derechos de autor, o enlaces adicionales.
+                <pre><code>&lt;footer&gt;
+            &lt;p&gt;&copy; 2025 Mi Sitio Web&lt;/p&gt;
+        &lt;/footer&gt;</code></pre>
+            </li>
+        </ul>
+        
+        <p>
+            Estas etiquetas semánticas son clave para crear páginas web bien organizadas, accesibles y fáciles de entender tanto para los usuarios como para los motores de búsqueda. Siempre es una buena práctica usarlas correctamente para mantener estándares de calidad y accesibilidad.
+        </p>
+        
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </article>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <article id="metadatos">
+        <header>
+            <h2>Metadatos en HTML</h2>
+            <p>Los metadatos en HTML son información sobre el contenido de la página web que no se muestra directamente, pero que es útil para los navegadores, motores de búsqueda, redes sociales y otras aplicaciones. Se definen dentro del elemento <code>&lt;head&gt;</code> y son esenciales para mejorar la accesibilidad y la visibilidad de una página en la web.</p>
+        </header>
+        
+        <section id="definicion">
+            <h3>¿Qué son los metadatos?</h3>
+            <p>Los metadatos son datos que describen otros datos. En el contexto de HTML, se refieren a información sobre el contenido de una página web, como su título, descripción, palabras clave, autor, y otros detalles que pueden ser utilizados por los navegadores y motores de búsqueda para mejorar la experiencia del usuario y optimizar el SEO (Search Engine Optimization).</p>
+        </section>
+    
+        <section id="tipos">
+            <h3>Tipos de Metadatos en HTML</h3>
+            <p>Existen varios tipos de metadatos que se pueden incluir dentro del <code>&lt;head&gt;</code> de una página HTML. A continuación, se describen los más comunes:</p>
+            
+            <section id="titulo">
+                <h4>Título de la Página</h4>
+                <p>El título de una página es un metadato importante que aparece en la barra de título del navegador y es utilizado por los motores de búsqueda. Se define dentro de la etiqueta <code>&lt;title&gt;</code>.</p>
+                <pre><code>&lt;title&gt;Mi Página Web&lt;/title&gt;</code></pre>
+            </section>
+    
+            <section id="descripcion">
+                <h4>Descripción de la Página</h4>
+                <p>La descripción proporciona un resumen breve del contenido de la página y es utilizada por los motores de búsqueda en sus resultados. Se define con la etiqueta <code>&lt;meta&gt;</code> con el atributo <code>name="description"</code>.</p>
+                <pre><code>&lt;meta name="description" content="Este es un ejemplo de página web sobre metadatos en HTML"&gt;</code></pre>
+            </section>
+    
+            <section id="palabras-clave">
+                <h4>Palabras Clave (Keywords)</h4>
+                <p>Las palabras clave ayudan a los motores de búsqueda a entender de qué trata la página. Aunque su importancia ha disminuido, siguen siendo útiles en algunos casos. Se definen mediante <code>&lt;meta&gt;</code> con el atributo <code>name="keywords"</code>.</p>
+                <pre><code>&lt;meta name="keywords" content="HTML, metadatos, SEO, página web"&gt;</code></pre>
+            </section>
+    
+            <section id="autor">
+                <h4>Autor de la Página</h4>
+                <p>Este metadato especifica quién es el autor del contenido de la página. Se define con la etiqueta <code>&lt;meta&gt;</code> y el atributo <code>name="author"</code>.</p>
+                <pre><code>&lt;meta name="author" content="Juan Pérez"&gt;</code></pre>
+            </section>
+    
+            <section id="charset">
+                <h4>Codificación de Caracteres (charset)</h4>
+                <p>El metadato <code>charset</code> especifica la codificación de caracteres que se utiliza en la página. Es importante para asegurar que los caracteres especiales se muestren correctamente. Se define dentro de la etiqueta <code>&lt;meta&gt;</code>.</p>
+                <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+            </section>
+        </section>
+    
+        <section id="importancia">
+            <h3>¿Por qué son importantes los metadatos?</h3>
+            <p>Los metadatos son esenciales para el funcionamiento de una página web por varias razones:</p>
+            <ul>
+                <li><strong>SEO (Optimización para motores de búsqueda):</strong> Los motores de búsqueda utilizan los metadatos para clasificar y mostrar las páginas web en sus resultados.</li>
+                <li><strong>Redes Sociales:</strong> Las redes sociales utilizan metadatos para mostrar los enlaces de forma más atractiva, como el título, la descripción y la imagen de vista previa.</li>
+                <li><strong>Accesibilidad:</strong> Los metadatos también mejoran la accesibilidad de la página, proporcionando información adicional que puede ser leída por herramientas de asistencia.</li>
+            </ul>
+        </section>
+    
+        <section id="metadatos-avanzados">
+            <h3>Metadatos Avanzados</h3>
+            <p>Además de los metadatos básicos que hemos mencionado, existen otros tipos de metadatos más avanzados que pueden mejorar aún más la experiencia de usuario y la interacción con la página:</p>
+            
+            <section id="opengraph">
+                <h4>Open Graph</h4>
+                <p>Open Graph es un conjunto de metadatos utilizados por redes sociales como Facebook y Twitter para mejorar la visualización de los enlaces compartidos. Estos metadatos incluyen información como el título, la descripción, la imagen y el tipo de contenido.</p>
+                <pre><code>&lt;meta property="og:title" content="Mi Página Web"&gt;</code></pre>
+            </section>
+    
+            <section id="twitter-cards">
+                <h4>Twitter Cards</h4>
+                <p>Las Twitter Cards son metadatos específicos para Twitter que permiten a los usuarios ver más contenido dentro de un tweet, como una imagen, un título y una descripción.</p>
+                <pre><code>&lt;meta name="twitter:title" content="Mi Página Web"&gt;</code></pre>
+            </section>
+    
+            <section id="viewport">
+                <h4>Viewport</h4>
+                <p>El metadato <code>viewport</code> controla cómo se muestra la página en dispositivos móviles. Es fundamental para el diseño web responsivo y la experiencia móvil.</p>
+                <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+            </section>
+        </section>
+    
+        <div>
+            <h3>Conclusión</h3>
+            <p>Los metadatos son una parte fundamental del desarrollo web moderno. No solo facilitan la indexación de la página por parte de los motores de búsqueda, sino que también mejoran la accesibilidad y la experiencia del usuario. Es recomendable incluir metadatos adecuados para aprovechar al máximo su potencial en términos de SEO, redes sociales y adaptabilidad en dispositivos móviles.</p>
+        </div>
+
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </article>
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <article id="texto">
+
+        <section>
+
+        <h2>Etiquetas para texto</h2>
+        <p>
+            HTML permite estructurar texto usando etiquetas específicas que indican el propósito del contenido. Esto no solo ayuda a la presentación visual, sino que también mejora la semántica y accesibilidad del contenido web.
+        </p>
+        
+        <h3>Estructura del texto con etiquetas más comunes</h3>
+        
+        <p>Las etiquetas principales para estructurar y dar formato al texto en HTML son:</p>
+        <ul>
+            <li>
+                <code>&lt;p&gt;</code>: Representa un párrafo. Es la forma más común de agrupar texto en bloques lógicos.
+                <pre><code>&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;h1&gt;...&lt;h6&gt;</code>: Representan encabezados jerárquicos, donde <code>&lt;h1&gt;</code> es el título principal y <code>&lt;h6&gt;</code> el menos importante.Sólo debe haber un h1 (título principal) y hasta h6, es decir, no existe h7 (puedes crear un elemento h7 personalizado con comportamiento similar a una etiqueta de encabezado usando Web Components y darle estilo y funcionalidad según tus necesidades, pero "esa es otra historia"👑⚔️. )
+                <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
+        &lt;h2&gt;Subtítulo&lt;/h2&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;strong&gt;</code>: Indica texto de importancia o énfasis fuerte, generalmente se muestra en negrita.
+                <pre><code>&lt;strong&gt;Texto importante&lt;/strong&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;em&gt;</code>: Denota énfasis en el texto, generalmente se muestra en cursiva.
+                <pre><code>&lt;em&gt;Texto enfatizado&lt;/em&gt;</code></pre>
+            </li>
+        </ul>
+        
+        <h3>Etiquetas para formatear texto</h3>
+        <ul>
+            <li>
+                <code>&lt;blockquote&gt;</code>: Citas en bloque. Se utiliza para contenido citado de otra fuente.
+                <pre><code>&lt;blockquote&gt;
+            "La tecnología avanza cada día más rápido."
+        &lt;/blockquote&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;q&gt;</code>: Citas en línea.
+                <pre><code>&lt;q&gt;Cita breve dentro de un párrafo.&lt;/q&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;code&gt;</code>: Representa fragmentos de código.
+                <pre><code>&lt;code&gt;let x = 10;&lt;/code&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;pre&gt;</code>: Conserva el formato del texto tal como se escribe, incluyendo espacios y saltos de línea.
+                <pre><code>&lt;pre&gt;
+            Código con formato exacto.
+            Línea 1
+            Línea 2
+        &lt;/pre&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;mark&gt;</code>: Destaca texto como si estuviera resaltado.
+                <pre><code>&lt;mark&gt;Texto destacado&lt;/mark&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;del&gt;</code>: Representa texto eliminado o tachado.
+                <pre><code>&lt;del&gt;Texto eliminado&lt;/del&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;ins&gt;</code>: Representa texto insertado.
+                <pre><code>&lt;ins&gt;Texto agregado&lt;/ins&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;sup&gt;</code> y <code>&lt;sub&gt;</code>: Superíndices y subíndices, respectivamente.
+                <pre><code>E=mc&lt;sup&gt;2&lt;/sup&gt; // H&lt;sub&gt;2&lt;/sub&gt;O</code></pre>
+            </li>
+        </ul>
+        
+        <h3>Etiquetas HTML menos comunes pero útiles</h3>
+        <ul>
+            <li>
+                <code>&lt;abbr&gt;</code>: Define abreviaturas.
+                <pre><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;time&gt;</code>: Representa un momento específico en el tiempo o una duración.
+                <pre><code>&lt;time datetime="2025-01-13"&gt;13 de enero de 2025&lt;/time&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;address&gt;</code>: Representa información de contacto.
+                <pre><code>&lt;address&gt;
+            Autor: Juan Pérez &lt;br&gt;
+            Email: juan@ejemplo.com
+        &lt;/address&gt;</code></pre>
+            </li>
+        </ul>
+        
+        <h3>Ejemplo de etiqueta en desuso</h3>
+        <p>HTML también tiene etiquetas en desuso, que ya no se recomiendan. Por ejemplo:</p>
+        <ul>
+            <li>
+                <code>&lt;font&gt;</code>: Se usaba para cambiar el tipo, tamaño o color de la fuente, pero ahora está en desuso porque el formato debe manejarse con CSS.
+                <pre><code>&lt;font color="red" size="4"&gt;Texto en desuso&lt;/font&gt;</code></pre>
+                <p><strong>Forma moderna:</strong> Usa CSS:</p>
+                <pre><code>&lt;span style="color:red; font-size:16px;"&gt;Texto recomendado&lt;/span&gt;</code></pre>
+            </li>
+        </ul>
+        
+        <h3>Importancia de usar etiquetas modernas</h3>
+        <p>
+            Usar etiquetas modernas y semánticas ayuda a garantizar que los navegadores interpreten correctamente el contenido. También mejora la accesibilidad y la optimización para motores de búsqueda (SEO), asegurando que el contenido sea claro para humanos y máquinas.
+        </p>
+
+        <h4>Otras etiquetas</h4>
+        <p>
+            Vamos a complementar la explicación con las etiquetas que faltaron, como <br>, <span>, <i>, y otras que son importantes en HTML.
+        </p>
+        <ul>
+            <li>
+                <code>&lt;br&gt;</code>: Inserta un salto de línea. Es una etiqueta vacía (sin cierre).
+                <pre><code>&lt;p&gt;Primera línea&lt;br&gt;Segunda línea&lt;/p&gt;</code></pre>
+                <p><strong>Nota:</strong> Úsala con moderación, para separar contenido es mejor usar etiquetas como <code>&lt;p&gt;</code>.</p>
+            </li>
+            <li>
+                <code>&lt;span&gt;</code>: Contenedor en línea usado para aplicar estilos o comportamientos específicos dentro del texto.
+                <pre><code>&lt;p&gt;El precio es &lt;span style="color: red;"&gt;$50&lt;/span&gt;.&lt;/p&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;i&gt;</code>: Representa texto que debe destacarse visualmente (generalmente en cursiva).
+                <pre><code>&lt;p&gt;El término &lt;i&gt;HTML&lt;/i&gt; es importante.&lt;/p&gt;</code></pre>
+                <p><strong>Nota:</strong> Para énfasis semántico usa <code>&lt;em&gt;</code>.</p>
+            </li>
+            <li>
+                <code>&lt;small&gt;</code>: Representa texto en un tamaño más pequeño, útil para notas o aclaraciones.
+                <pre><code>&lt;p&gt;&copy; 2025 &lt;small&gt;Todos los derechos reservados.&lt;/small&gt;&lt;/p&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;mark&gt;</code>: Resalta texto como si estuviera marcado.
+                <pre><code>&lt;p&gt;Palabra clave: &lt;mark&gt;HTML&lt;/mark&gt;.&lt;/p&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;abbr&gt;</code>: Define una abreviatura o acrónimo.
+                <pre><code>&lt;p&gt;La organización &lt;abbr title="World Wide Web Consortium"&gt;W3C&lt;/abbr&gt; establece estándares web.&lt;/p&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;cite&gt;</code>: Representa el título de una obra.
+                <pre><code>&lt;p&gt;Mi libro favorito es &lt;cite&gt;Cien años de soledad&lt;/cite&gt;.&lt;/p&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;dfn&gt;</code>: Marca la primera aparición o definición de un término en un texto.
+                <pre><code>&lt;p&gt;El término &lt;dfn&gt;API&lt;/dfn&gt; significa Interfaz de Programación de Aplicaciones.&lt;/p&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;sub&gt;</code> y <code>&lt;sup&gt;</code>: Representan subíndices y superíndices respectivamente.
+                <pre><code>&lt;p&gt;La fórmula es H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;</code></pre>
+                <pre><code>&lt;p&gt;x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt; = z&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;hr&gt;</code>: Inserta una línea horizontal para separar secciones.
+                <pre><code>&lt;p&gt;Primera sección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;Segunda sección&lt;/p&gt;</code></pre>
+            </li>
+            <li>
+                <code>&lt;font&gt;</code>: Se usaba para cambiar el tipo, tamaño o color de la fuente, pero ahora está en desuso porque el formato debe manejarse con CSS.
+                <pre><code>&lt;font color="red" size="4"&gt;Texto en desuso&lt;/font&gt;</code></pre>
+                <p><strong>Forma moderna:</strong> Usa CSS:</p>
+                <pre><code>&lt;span style="color:red; font-size:16px;"&gt;Texto recomendado&lt;/span&gt;</code></pre>
+            </li>
+        </ul>
+
+        </section>
+
+        <section>
+
+            <h2>¿Qué es Schema.org y por qué usar microdatos?</h2>
+            <p>Usar microdatos con Schema.org en HTML es una práctica común y valiosa, especialmente en un sitio de comercio electrónico, también conocide como E-Commerce. Estos microdatos ayudan a estructurar mejor la información de tu sitio web, proporcionando datos específicos que los motores de búsqueda pueden interpretar fácilmente para mostrar resultados enriquecidos (rich snippets) en las páginas de resultados (SERPs).</p>
+            
+            <h3>¿Qué es Schema.org?</h3>
+            <p>Schema.org es una iniciativa conjunta de Google, Microsoft, Yahoo y Yandex para crear un vocabulario estandarizado que describa datos en sitios web. Este vocabulario es interpretado por motores de búsqueda para entender mejor el contenido y mejorar la presentación de los resultados. Al utilizar este vocabulario, los motores de búsqueda pueden mostrar información más detallada y precisa sobre los elementos de tu página, como productos, reseñas o eventos, directamente en los resultados de búsqueda.</p>
+        
+            <h3>¿Por qué usar microdatos en un e-commerce?</h3>
+            <p>En un sitio de comercio electrónico, puedes usar microdatos para:</p>
+            <ul>
+                <li><strong>Mostrar productos en los resultados de búsqueda:</strong> Incluye detalles como nombre, precio, disponibilidad y calificación.</li>
+                <li><strong>Aumentar la visibilidad y el CTR:</strong> Destacar información clave directamente en los resultados puede atraer más clics.</li>
+                <li><strong>Mejorar la accesibilidad y la experiencia del usuario:</strong> Facilita la comprensión de los datos para motores de búsqueda y asistentes virtuales, mejorando la interacción del usuario con el sitio.</li>
+            </ul>
+        
+            <h3>Ventajas prácticas de usar microdatos en un e-commerce</h3>
+            <ul>
+                <li><strong>Resultados enriquecidos:</strong> Los productos pueden aparecer con calificaciones, precios y disponibilidad en los resultados de búsqueda, lo que mejora la visibilidad y la tasa de clics.</li>
+                <li><strong>Compatibilidad con asistentes de voz:</strong> Los asistentes como Google Assistant pueden utilizar estos datos para responder preguntas de usuarios de manera más precisa.</li>
+                <li><strong>Mayor confianza:</strong> Los clientes tienen más información antes de visitar tu sitio, lo que puede aumentar la probabilidad de conversión.</li>
+            </ul>
+        
+            <h3>Otros esquemas útiles para e-commerce</h3>
+            <ul>
+                <li><strong>Oferta especial:</strong> Usa <a href="https://schema.org/Offer">https://schema.org/Offer</a> para describir ofertas especiales o descuentos.</li>
+                <li><strong>Reseñas individuales:</strong> Usa <a href="https://schema.org/Review">https://schema.org/Review</a> para mostrar opiniones detalladas de productos o servicios.</li>
+                <li><strong>Breadcrumbs:</strong> Ayuda a mejorar la navegación de tu sitio, usando <a href="https://schema.org/BreadcrumbList">https://schema.org/BreadcrumbList</a>.</li>
+                <li><strong>Eventos de ventas o descuentos:</strong> Usa <a href="https://schema.org/SaleEvent">https://schema.org/SaleEvent</a> para describir eventos de ventas o promociones especiales.</li>
+            </ul>
+        
+        </section>
+        
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </article>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+    <article id="enlaces">
+        <section>
+            <h2>Enlaces en HTML</h2>
+        
+            <p>En HTML, los enlaces se crean utilizando la etiqueta <code>&lt;a&gt;</code> y las imágenes con la etiqueta <code>&lt;img&gt;</code>. Ambas son esenciales para la navegación y presentación de contenido visual en páginas web.</p>
+        
+            <h3>Enlaces (<code>&lt;a&gt;</code>)</h3>
+            <p>La etiqueta <code>&lt;a&gt;</code>, conocida como <em>anchor</em> (ancla), se usa para crear hipervínculos, es decir, enlaces a otras páginas, documentos, o recursos dentro de un sitio web o fuera de él. Un enlace se define con el atributo <code>href</code>, que especifica la dirección (URL) a la que se dirige el enlace.</p>
+            
+            <p>Ejemplo básico de un enlace:</p>
+            <pre><code>&lt;a href="https://www.example.com"&gt;Visita nuestro sitio&lt;/a&gt;</code></pre>
+            <p>En este caso, el texto "Visita nuestro sitio" se convierte en un enlace que llevará al usuario a <a href="https://www.example.com" target="_blank">www.example.com</a>.</p>
+        
+            <h4>Atributos comunes de los enlaces:</h4>
+            <ul>
+                <li><strong>href:</strong> Define la URL de destino del enlace.</li>
+                <li><strong>target:</strong> Especifica cómo se abrirá el enlace. El valor más común es <code>_blank</code>, que abre el enlace en una nueva ventana o pestaña del navegador. Por ejemplo: <code>&lt;a href="https://www.example.com" target="_blank"&gt;Enlace&lt;/a&gt;</code>.</li>
+                <li><strong>title:</strong> Proporciona información adicional sobre el enlace cuando el usuario pasa el cursor sobre él. Ejemplo: <code>&lt;a href="https://www.example.com" title="Ir al sitio de ejemplo"&gt;Enlace con título&lt;/a&gt;</code></li>
+                <li><strong>rel:</strong> Define la relación entre la página actual y la página a la que enlaza. Por ejemplo, <code>rel="noopener noreferrer"</code> se usa para mejorar la seguridad cuando se abren enlaces en nuevas pestañas.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Imágenes en HTML(<code>&lt;img&gt;</code>)</h2>
+            <p>La etiqueta <code>&lt;img&gt;</code> se utiliza para insertar imágenes en una página web. A diferencia de otras etiquetas, <code>&lt;img&gt;</code> es un elemento vacío, lo que significa que no tiene una etiqueta de cierre. Los atributos principales de esta etiqueta son <code>src</code> y <code>alt</code>.</p>
+        
+            <p>Ejemplo básico de una imagen:</p>
+            <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+            <p>En este caso, la imagen "imagen.jpg" se mostrará en la página. Si la imagen no se puede cargar, se mostrará el texto alternativo ("Descripción de la imagen").</p>
+            <h3>Ejemplo imágen</h3>
+
+            <img src="02-Live.jpg" id="BardSongs" alt="Descripción de la imagen" title="Mantecona's Tabern"> 
+        
+            <h4>Atributos comunes de las imágenes:</h4>
+            <ul>
+                <li><strong>src:</strong> Define la ruta o URL de la imagen. Por ejemplo: <code>&lt;img src="logo.png"&gt;</code>.</li>
+                <li><strong>alt:</strong> Proporciona un texto alternativo que describe la imagen. Este texto se muestra si la imagen no se puede cargar o si el usuario tiene una discapacidad visual y usa un lector de pantalla. Ejemplo: <code>&lt;img src="logo.png" alt="Logotipo de la empresa"&gt;</code>.</li>
+                <li><strong>width y height:</strong> Especifican el tamaño de la imagen en píxeles. Aunque se recomienda usar CSS para el control de diseño, puedes especificar un tamaño en el HTML directamente. Ejemplo: <code>&lt;img src="foto.jpg" width="300" height="200"&gt;</code>.</li>
+                <li><strong>title:</strong> Muestra un texto cuando el usuario pasa el cursor sobre la imagen. Ejemplo: <code>&lt;img src="logo.png" alt="Logotipo" title="Haz clic para ver más"&gt;</code>.</li>
+            </ul>
+        </section>
+
+        <section id="srcset-figure">
+            <h2>Uso de srcset y la Etiqueta <figure> en HTML</h2>
+            
+            <div>
+                <h3>1. Atributo <code>srcset</code> en la etiqueta <code>&lt;img&gt;</code></h3>
+                <p>El atributo <code>srcset</code> en la etiqueta <code>&lt;img&gt;</code> se utiliza para especificar diferentes versiones de una imagen, permitiendo que el navegador seleccione la más adecuada según el tamaño y la resolución de la pantalla del usuario. Esto es especialmente útil para crear páginas web responsivas y optimizar el rendimiento.</p>
+                <p><strong>¿Cómo funciona el atributo <code>srcset</code>?</strong></p>
+                <p>El atributo <code>srcset</code> permite proporcionar una lista de imágenes alternativas, junto con una descripción de sus características (como el ancho en píxeles o el factor de densidad de la pantalla). El navegador seleccionará automáticamente la imagen más adecuada.</p>
+                
+                <pre><code>
+                &lt;img src="imagen-predeterminada.jpg" 
+                srcset="imagen-pequena.jpg 480w, 
+                    imagen-mediana.jpg 800w, 
+                    imagen-grande.jpg 1200w" 
+                sizes="(max-width: 600px) 480px, 
+                    (max-width: 1200px) 800px, 
+                    1200px" 
+                alt="Descripción de la imagen"&gt;
+                </code></pre>
+                
+                <p><strong>Explicación de los atributos:</strong></p>
+                <ul>
+                    <li><strong><code>src</code>:</strong> Proporciona la URL de la imagen predeterminada (usada por navegadores que no soportan <code>srcset</code> o si no se cumplen las condiciones de las imágenes alternativas).</li>
+                    <li><strong><code>srcset</code>:</strong> Define una lista de imágenes alternativas, cada una seguida de un descriptor:
+                        <ul>
+                            <li><code>480w</code>, <code>800w</code>, etc.: Especifica el ancho en píxeles de la imagen.</li>
+                            <li><code>1x</code>, <code>2x</code>, etc. (opcional): Indica el factor de densidad de la imagen para pantallas con diferentes resoluciones (como pantallas Retina).</li>
+                        </ul>
+                    </li>
+                    <li><strong><code>sizes</code>:</strong> Indica el ancho del espacio en el diseño en el que se mostrará la imagen (en unidades CSS) dependiendo de las condiciones del dispositivo, como el ancho de la pantalla:
+                        <ul>
+                            <li><code>(max-width: 600px) 480px</code>: Si la pantalla tiene menos de 600px de ancho, usa una imagen de 480px.</li>
+                            <li><code>(max-width: 1200px) 800px</code>: Si la pantalla tiene entre 600px y 1200px, usa una imagen de 800px.</li>
+                            <li><code>1200px</code>: En pantallas más grandes, usa una imagen de 1200px.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Nota:</strong> El atributo <code>sizes</code> puede ser reemplazado por CSS, lo que simplifica el manejo de los tamaños en la mayoría de los casos.</p>
+            </div>
+        
+            <div>
+                <h3>2. La etiqueta <code>&lt;figure&gt;</code> en HTML</h3>
+                <p>La etiqueta <code>&lt;figure&gt;</code> se utiliza para agrupar contenido independiente, generalmente relacionado con componentes visuales como imágenes, diagramas, gráficos, fragmentos de código, etc. Se usa comúnmente junto con la etiqueta <code>&lt;figcaption&gt;</code> para proporcionar un título o descripción del contenido.</p>
+                
+                <pre><code>
+        &lt;figure&gt;
+            &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+            &lt;figcaption&gt;Descripción de la imagen o contenido relacionado.&lt;/figcaption&gt;
+        &lt;/figure&gt;
+                </code></pre>
+                
+                <p><strong>Explicación de los elementos:</strong></p>
+                <ul>
+                    <li><strong><code>&lt;figure&gt;</code>:</strong> Agrupa el contenido visual y su descripción. Es semánticamente significativo y facilita la comprensión del contenido por parte de los motores de búsqueda y lectores de pantalla.</li>
+                    <li><strong><code>&lt;img&gt;</code>:</strong> Representa el contenido visual, como una imagen o un gráfico.</li>
+                    <li><strong><code>&lt;figcaption&gt;</code>:</strong> Proporciona una leyenda para el contenido dentro de <code>&lt;figure&gt;</code>. Es opcional, pero útil para añadir contexto o descripción.</li>
+                </ul>
+        
+                <p><strong>Ventajas de usar <code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code>:</strong></p>
+                <ul>
+                    <li><strong>Accesibilidad:</strong> Mejora la experiencia de usuarios que utilizan lectores de pantalla, ya que el contenido y su descripción están semánticamente relacionados.</li>
+                    <li><strong>SEO:</strong> Los motores de búsqueda pueden entender mejor el propósito del contenido visual y su relación con el texto.</li>
+                    <li><strong>Flexibilidad:</strong> Es útil para cualquier contenido visual o referencial, no solo imágenes.</li>
+                    <li><strong>Separación lógica:</strong> Facilita el diseño y la estructura del documento HTML.</li>
+                </ul>
+        
+                <p><strong>Estilos con CSS:</strong> Puedes personalizar <code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code> con CSS para mejorar su presentación, como ajustar márgenes, fondos y tipografía. Incluso puedes envolver fragmentos de código en <code>&lt;figure&gt;</code> para destacarlos dentro del contenido.</p>
+            </div>
+        </section>
+        
+
+        <section>
+            <h2>Rutas Absolutas y Relativas en HTML</h2>
+        
+            <p>En HTML, las rutas absolutas y relativas se utilizan para enlazar a recursos como páginas, imágenes, hojas de estilo o scripts. Aquí está la diferencia:</p>
+        
+            <h3>Ruta Absoluta</h3>
+            <p>Es una dirección completa que incluye el protocolo (como <code>http://</code> o <code>https://</code>) y el dominio. Esta ruta apunta a un recurso externo o específico sin importar la ubicación del archivo actual.</p>
+            
+            <p>Ejemplo de ruta absoluta:</p>
+            <pre><code>&lt;a href="https://www.ejemplo.com/pagina.html"&gt;Página Absoluta&lt;/a&gt;</code></pre>
+            <pre><code>&lt;img src="https://www.ejemplo.com/imagenes/logo.png" alt="Logo"&gt;</code></pre>
+        
+            <h4>Características:</h4>
+            <ul>
+                <li>Funciona desde cualquier lugar.</li>
+                <li>Utilizada generalmente para recursos externos.</li>
+                <li>Incluye toda la dirección del recurso.</li>
+            </ul>
+        
+            <h3>Ruta Relativa</h3>
+            <p>Es una dirección parcial basada en la ubicación actual del archivo. Se utiliza para enlazar recursos dentro del mismo sitio o proyecto.</p>
+        
+            <h4>Tipos de Rutas Relativas:</h4>
+        
+            <h5>1. Ruta en el mismo directorio</h5>
+            <p>Cuando el archivo está en el mismo directorio que el recurso:</p>
+            <pre><code>&lt;a href="pagina.html"&gt;Página Relativa&lt;/a&gt;</code></pre>
+            <pre><code>&lt;img src="logo.png" alt="Logo"&gt;</code></pre>
+        
+            <h5>2. Ruta en un subdirectorio</h5>
+            <p>Cuando el recurso está en un directorio dentro del actual:</p>
+            <pre><code>&lt;a href="subcarpeta/pagina.html"&gt;Subdirectorio&lt;/a&gt;</code></pre>
+            <pre><code>&lt;img src="imagenes/logo.png" alt="Logo"&gt;</code></pre>
+        
+            <h5>3. Ruta en un directorio superior</h5>
+            <p>Cuando se necesita acceder al directorio padre usando <code>../</code>:</p>
+            <pre><code>&lt;a href="../pagina.html"&gt;Directorio Superior&lt;/a&gt;</code></pre>
+            <pre><code>&lt;img src="../imagenes/logo.png" alt="Logo"&gt;</code></pre>
+        
+            <h5>4. Ruta desde la raíz del proyecto</h5>
+            <p>Usando <code>/</code>, se hace referencia al directorio raíz del servidor o del proyecto:</p>
+            <pre><code>&lt;a href="/inicio.html"&gt;Inicio&lt;/a&gt;</code></pre>
+            <pre><code>&lt;img src="/imagenes/logo.png" alt="Logo"&gt;</code></pre>
+        
+            <h4>Características:</h4>
+            <ul>
+                <li>Depende de la ubicación del archivo actual.</li>
+                <li>Es útil para organizar proyectos y facilitar cambios de dominio o rutas.</li>
+                <li>Más comúnmente utilizada en proyectos internos o locales.</li>
+            </ul>
+        
+            <h3>Enlaces con Atributo <code>download</code></h3>
+            <p>Puedo usar un enlace con el atributo <code>download</code> para descargar archivos directamente desde un enlace, como en este ejemplo:</p>
+            <pre><code>&lt;a href="pexels.io/manzanas" download="manzanas.jpg"&gt;Descargar manzanas&lt;/a&gt;</code></pre>
+            <p>El atributo <code>download</code> le indica al navegador que, en lugar de abrir el archivo, debe descargarlo.</p>
+        
+            <h3>Marcadores en HTML</h3>
+            <p>Los marcadores se utilizan para navegar a diferentes secciones de una misma página. Para hacerlo, se utiliza el atributo <code>id</code> en un elemento de destino y un enlace con <code>href</code> apuntando al <code>id</code>:</p>
+            
+            <p>Definir un marcador con <code>id</code>:</p>
+            <pre><code>&lt;div id="seccion1"&gt;Contenido de la sección 1&lt;/div&gt;</code></pre>
+        
+            <p>Enlazar a la sección usando <code>&lt;a href="#nombredelID"&gt;</code>:</p>
+            <pre><code>&lt;a href="#seccion1"&gt;Ir a la Sección 1&lt;/a&gt;</code></pre>
+            <p>Esto hará que el navegador se desplace automáticamente a la sección con el <code>id="seccion1"</code> cuando se haga clic en el enlace.</p>
+        
+            <h4>Características:</h4>
+            <ul>
+                <li>Permite la navegación interna dentro de la misma página.</li>
+                <li>Facilita la organización de contenido largo o complejo en una página web.</li>
+                <li>Es común en tablas de contenido o menús de navegación.</li>
+            </ul>
+        </section>
+        
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </article>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <article id="listas">
+        <section>
+            <h2>Listas en HTML</h2>
+            <p>En HTML, las listas se utilizan para organizar elementos en una secuencia o en grupos. Existen dos tipos principales de listas: <strong>listas ordenadas</strong> y <strong>listas desordenadas</strong>. Cada tipo tiene su propio formato y propósito, dependiendo de cómo se quiere presentar la información.</p>
+        
+            <h3>Lista Ordenada (&lt;ol&gt;)</h3>
+            <p>Una lista ordenada se usa cuando los elementos tienen un orden específico. En este tipo de lista, cada ítem está numerado automáticamente por el navegador, lo que indica que la secuencia es importante. Se usa la etiqueta <code>&lt;ol&gt;</code> para crear una lista ordenada, y cada ítem se define dentro de la lista usando la etiqueta <code>&lt;li&gt;</code>.</p>
+            
+            <p>Ejemplo de una lista ordenada:</p>
+            <pre><code>
+        &lt;ol&gt;
+            &lt;li&gt;Primer paso&lt;/li&gt;
+            &lt;li&gt;Segundo paso&lt;/li&gt;
+            &lt;li&gt;Tercer paso&lt;/li&gt;
+        &lt;/ol&gt;
+            </code></pre>
+        
+            <p>Esto generará una lista numerada en la página:</p>
+            <ol>
+                <li>Primer paso</li>
+                <li>Segundo paso</li>
+                <li>Tercer paso</li>
+            </ol>
+        
+            <h4>Atributos de las listas ordenadas</h4>
+            <p>En las listas ordenadas, puedes usar algunos atributos para personalizar la numeración:</p>
+            
+            <ul>
+                <li><strong>start</strong>: Define el número con el que debe comenzar la numeración.</li>
+                <li><strong>type</strong>: Cambia el tipo de marcador (puede ser <code>1</code> para números, <code>A</code> para letras mayúsculas, <code>a</code> para letras minúsculas, etc.).</li>
+                <li><strong>reversed</strong>: Invierte el orden de la numeración, comenzando desde el número más alto.</li>
+            </ul>
+        
+            <p>Ejemplo:</p>
+            <pre><code>
+        &lt;ol start="5" reversed type="A"&gt;
+            &lt;li&gt;Quinto paso&lt;/li&gt;
+            &lt;li&gt;Cuarto paso&lt;/li&gt;
+            &lt;li&gt;Tercer paso&lt;/li&gt;
+        &lt;/ol&gt;
+            </code></pre>
+        
+            <p>Esto generará una lista ordenada que comienza en la letra "A" y va en orden inverso:</p>
+            <ol start="5" reversed type="A">
+                <li>Quinto paso</li>
+                <li>Cuarto paso</li>
+                <li>Tercer paso</li>
+            </ol>
+        
+            <h3>Lista Desordenada (&lt;ul&gt;)</h3>
+            <p>Una lista desordenada se usa cuando el orden de los elementos no es relevante. En este tipo de lista, cada ítem está precedido por un marcador (generalmente un círculo, pero esto depende de la configuración del navegador). Se usa la etiqueta <code>&lt;ul&gt;</code> para crear una lista desordenada, y cada ítem se define con la etiqueta <code>&lt;li&gt;</code>.</p>
+            
+            <p>Ejemplo de una lista desordenada:</p>
+            <pre><code>
+        &lt;ul&gt;
+            &lt;li&gt;Manzanas&lt;/li&gt;
+            &lt;li&gt;Bananas&lt;/li&gt;
+            &lt;li&gt;Cerezas&lt;/li&gt;
+        &lt;/ul&gt;
+            </code></pre>
+        
+            <p>Esto generará una lista con viñetas:</p>
+            <ul>
+                <li>Manzanas</li>
+                <li>Bananas</li>
+                <li>Cerezas</li>
+            </ul>
+        
+            <h4>Atributos de las listas desordenadas</h4>
+            <p>En las listas desordenadas, el atributo principal es el <strong>list-style-type</strong>, que define el tipo de marcador usado en la lista. Se puede usar en el elemento <code>&lt;ul&gt;</code> o en el CSS:</p>
+            
+            <ul>
+                <li><strong>disc</strong>: El marcador por defecto, representado por un círculo lleno.</li>
+                <li><strong>circle</strong>: Un marcador representado por un círculo vacío.</li>
+                <li><strong>square</strong>: Un marcador representado por un cuadrado lleno.</li>
+            </ul>
+        
+            <p>Ejemplo con <code>list-style-type</code>:</p>
+            <pre><code>
+        &lt;ul style="list-style-type: square"&gt;
+            &lt;li&gt;Elemento 1&lt;/li&gt;
+            &lt;li&gt;Elemento 2&lt;/li&gt;
+            &lt;li&gt;Elemento 3&lt;/li&gt;
+        &lt;/ul&gt;
+            </code></pre>
+        
+            <p>Esto generará una lista con marcadores en forma de cuadrados:</p>
+            <ul style="list-style-type: square">
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ul>
+        
+            <h3>Listas Anidadas</h3>
+            <p>Las listas también pueden ser anidadas, es decir, puedes colocar una lista dentro de otra. Esto es útil cuando tienes subcategorías o elementos dentro de un elemento principal. En una lista ordenada o desordenada, puedes agregar otro <code>&lt;ul&gt;</code> o <code>&lt;ol&gt;</code> dentro de un <code>&lt;li&gt;</code>.</p>
+        
+            <p>Ejemplo de lista anidada:</p>
+            <pre><code>
+        &lt;ul&gt;
+            &lt;li&gt;Frutas
+                &lt;ul&gt;
+                    &lt;li&gt;Manzanas&lt;/li&gt;
+                    &lt;li&gt;Bananas&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;Verduras
+                &lt;ul&gt;
+                    &lt;li&gt;Espinacas&lt;/li&gt;
+                    &lt;li&gt;Zanahorias&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+            </code></pre>
+        
+            <p>Esto generará una lista con elementos anidados:</p>
+            <ul>
+                <li>Frutas
+                    <ul>
+                        <li>Manzanas</li>
+                        <li>Bananas</li>
+                    </ul>
+                </li>
+                <li>Verduras
+                    <ul>
+                        <li>Espinacas</li>
+                        <li>Zanahorias</li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <h3>Listas de Definición (&lt;dl&gt;)</h3>
+            <p>Además de las listas ordenadas y desordenadas, HTML también ofrece un tipo de lista llamado lista de definición. Esta lista se utiliza para mostrar definiciones de términos. Está compuesta por los siguientes elementos:</p>
+            <ul>
+                <li><strong>&lt;dl&gt;</strong>: Define la lista de definición.</li>
+                <li><strong>&lt;dt&gt;</strong>: Define el término a ser descrito.</li>
+                <li><strong>&lt;dd&gt;</strong>: Define la descripción o definición del término.</li>
+            </ul>
+        
+            <p>Ejemplo de una lista de definición:</p>
+            <pre><code>
+        &lt;dl&gt;
+            &lt;dt&gt;HTML&lt;/dt&gt;
+            &lt;dd&gt;Es el lenguaje de marcado utilizado para crear páginas web.&lt;/dd&gt;
+            &lt;dt&gt;CSS&lt;/dt&gt;
+            &lt;dd&gt;Es el lenguaje utilizado para diseñar y dar estilo a las páginas web.&lt;/dd&gt;
+        &lt;/dl&gt;
+            </code></pre>
+        
+            <p>Esto generará una lista de definición:</p>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Es el lenguaje de marcado utilizado para crear páginas web.</dd>
+                <dt>CSS</dt>
+                <dd>Es el lenguaje utilizado para diseñar y dar estilo a las páginas web.</dd>
+            </dl>
+        </section>
+
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </article>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <article id="formularios">
+        <h2>Formularios</h2>
+        <p>Los formularios en HTML son elementos fundamentales para la interacción con los usuarios. Se utilizan para recopilar información y enviarla a un servidor para su procesamiento. Un formulario se estructura principalmente con la etiqueta <code>&lt;form&gt;</code> y varios elementos interactivos como <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, y <code>&lt;button&gt;</code>.</p>
+    
+        <section>
+            <h3>1. Estructura de un formulario</h3>
+            <p>La estructura básica de un formulario se crea con la etiqueta <code>&lt;form&gt;</code>. Esta etiqueta agrupa los controles del formulario, como campos de texto, botones, menús desplegables, etc. A continuación se muestra un ejemplo básico:</p>
+    
+            <pre><code>&lt;form action="procesar.php" method="post"&gt;
+        &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+        &lt;input type="text" id="nombre" name="nombre" required&gt;
+    
+        &lt;label for="email"&gt;Correo Electrónico:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+    
+        &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+        &lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;
+    
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;</code></pre>
+        </section>
+    
+        <section>
+            <h3>2. Elementos clave en formularios</h3>
+            <p>Existen varios tipos de elementos dentro de un formulario que permiten interactuar con el usuario. Los más comunes son:</p>
+            
+            <ul>
+                <li><strong>&lt;input&gt;</strong>: Se usa para campos de texto, contraseñas, números, etc.</li>
+                <li><strong>&lt;textarea&gt;</strong>: Se utiliza para entradas de texto más largas, como comentarios o mensajes.</li>
+                <li><strong>&lt;select&gt;</strong>: Permite crear listas desplegables.</li>
+                <li><strong>&lt;button&gt;</strong>: Se usa para enviar el formulario o realizar acciones.</li>
+            </ul>
+    
+            <p>A continuación, te mostramos ejemplos de estos elementos:</p>
+            
+            <pre><code>&lt;input type="text" name="usuario" placeholder="Ingrese su usuario"&gt;</code></pre>
+            <pre><code>&lt;textarea name="comentarios" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></pre>
+            <pre><code>&lt;select name="opciones"&gt;
+        &lt;option value="opcion1"&gt;Opción 1&lt;/option&gt;
+        &lt;option value="opcion2"&gt;Opción 2&lt;/option&gt;
+        &lt;option value="opcion3"&gt;Opción 3&lt;/option&gt;
+    &lt;/select&gt;</code></pre>
+        </section>
+    
+        <section>
+            <h3>3. Validación de formularios</h3>
+            <p>HTML5 proporciona varias herramientas para la validación de formularios antes de que se envíen al servidor. Algunos de los atributos de validación más comunes son:</p>
+            
+            <ul>
+                <li><strong>required</strong>: Hace que un campo sea obligatorio.</li>
+                <li><strong>pattern</strong>: Permite definir una expresión regular para validar el formato del dato.</li>
+                <li><strong>min</strong> y <strong>max</strong>: Establecen los valores mínimo y máximo para ciertos campos (como números o fechas).</li>
+            </ul>
+            
+            <p>Ejemplo con validación básica:</p>
+    
+            <pre><code>&lt;form action="procesar.php" method="post"&gt;
+        &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+        &lt;input type="text" id="nombre" name="nombre" required&gt;
+    
+        &lt;label for="email"&gt;Correo Electrónico:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+    
+        &lt;label for="contraseña"&gt;Contraseña:&lt;/label&gt;
+        &lt;input type="password" id="contraseña" name="contraseña" required&gt;
+    
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+    &lt;/form&gt;</code></pre>
+        </section>
+    
+        <section>
+            <h3>4. Elementos adicionales: &lt;fieldset&gt;, &lt;legend&gt;, y &lt;label&gt;</h3>
+            <p>Para mejorar la accesibilidad y organización de los formularios, puedes usar los elementos <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code>. El elemento <code>&lt;fieldset&gt;</code> agrupa elementos relacionados, mientras que <code>&lt;legend&gt;</code> proporciona una descripción de esos elementos.</p>
+    
+            <pre><code>&lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Información Personal&lt;/legend&gt;
+            &lt;label for="name"&gt;Nombre:&lt;/label&gt;
+            &lt;input type="text" id="name" name="name"&gt;
+            &lt;br&gt;
+            &lt;label for="age"&gt;Edad:&lt;/label&gt;
+            &lt;input type="number" id="age" name="age"&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;</code></pre>
+    
+            <p>Los elementos <code>&lt;label&gt;</code> son importantes para asociar texto con campos de formulario. Mejora la accesibilidad y permite que los usuarios hagan clic en el texto para seleccionar el campo correspondiente:</p>
+    
+            <pre><code>&lt;label for="username"&gt;Usuario:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username"&gt;</code></pre>
+        </section>
+    
+        <section>
+            <h3>5. Menú desplegable y selección múltiple</h3>
+            <p>El elemento <code>&lt;select&gt;</code> se utiliza para crear menús desplegables, donde el usuario puede seleccionar una opción. Si necesitas permitir múltiples selecciones, puedes agregar el atributo <code>multiple</code>.</p>
+    
+            <pre><code>&lt;label for="colors"&gt;Elige un color:&lt;/label&gt;
+    &lt;select id="colors" name="colors"&gt;
+        &lt;option value="red"&gt;Rojo&lt;/option&gt;
+        &lt;option value="green"&gt;Verde&lt;/option&gt;
+        &lt;option value="blue"&gt;Azul&lt;/option&gt;
+    &lt;/select&gt;</code></pre>
+        </section>
+    
+        <section>
+            <h3>6. Área de texto</h3>
+            <p>El elemento <code>&lt;textarea&gt;</code> permite que el usuario ingrese texto largo, como comentarios o descripciones. Se puede personalizar con atributos como <code>rows</code> y <code>cols</code> para ajustar el tamaño, o <code>maxlength</code> para limitar la cantidad de caracteres ingresados.</p>
+    
+            <pre><code>&lt;textarea name="comentarios" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></pre>
+        </section>
+    
+        <section>
+            <h3>7. Estilización de formularios</h3>
+            <p>Los formularios y sus elementos se pueden estilizar utilizando CSS para mejorar su apariencia. Puedes cambiar el tamaño, color, borde y más, usando reglas CSS.</p>
+    
+            <pre><code>textarea {
+        width: 100%;
+        height: 150px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 16px;
+    }</code></pre>
+        </section>
+        
+        <section>
+            <h3>1. Formulario de entrada de texto</h3>
+            <form action="procesar.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                <button type="submit" target="_blank">Enviar</button>
+            </form>
+            <p>Este es un campo de texto básico. Se utiliza cuando se espera que el usuario ingrese un texto corto, como un nombre o un apellido.</p>
+        </section>
+    
+        <section>
+            <h3>2. Formulario de correo electrónico</h3>
+            <form action="procesar.php" method="post">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required>
+                <button type="submit" target="_blank">Enviar</button>
+            </form>
+            <p>Este campo es para ingresar una dirección de correo electrónico. El navegador validará automáticamente el formato del correo antes de enviarlo.</p>
+        </section>
+    
+        <section>
+            <h3>3. Formulario de contraseña</h3>
+            <form action="procesar.php" method="post">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña" required>
+                <button type="submit" target="_blank">Enviar</button>
+            </form>
+            <p>El campo de contraseña es utilizado para ingresar una clave secreta. El texto ingresado se oculta por razones de seguridad.</p>
+        </section>
+    
+        <section>
+            <h3>4. Formulario de selección de color</h3>
+            <form action="procesar.php" method="post">
+                <label for="color">Elige un color:</label>
+                <input type="color" id="color" name="color" value="#ff0000">
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Este formulario permite que el usuario seleccione un color usando un selector de color. El valor por defecto es el rojo (#ff0000).</p>
+        </section>
+    
+        <section>
+            <h3>5. Formulario con área de texto</h3>
+            <form action="procesar.php" method="post">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje aquí" required></textarea>
+                <button type="submit" target="_blank">Enviar</button>
+            </form>
+            <p>El campo <code>&lt;textarea&gt;</code> permite que el usuario ingrese texto largo, como comentarios, descripciones o mensajes.</p>
+        </section>
+    
+        <section>
+            <h3>6. Formulario de selección múltiple</h3>
+            <form action="procesar.php" method="post">
+                <label for="opciones">Elige tus opciones favoritas:</label>
+                <select id="opciones" name="opciones[]" multiple>
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    <option value="opcion4">Opción 4</option>
+                </select>
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Este formulario permite que el usuario seleccione varias opciones de una lista desplegable. El atributo <code>multiple</code> permite que se elijan más de una opción.</p>
+        </section>
+    
+        <section>
+            <h3>7. Formulario de radio buttons</h3>
+            <form action="procesar.php" method="post">
+                <p>¿Prefieres el café o el té?</p>
+                <label for="cafe">
+                    <input type="radio" id="cafe" name="bebida" value="cafe" required> Café
+                </label>
+                <label for="te">
+                    <input type="radio" id="te" name="bebida" value="te"> Té
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Los botones de opción o <code>radio</code> permiten que el usuario seleccione solo una opción de un conjunto de opciones disponibles.</p>
+        </section>
+    
+        <section>
+            <h3>8. Formulario de casillas de verificación (Checkbox)</h3>
+            <form action="procesar.php" method="post">
+                <label for="aceptar">Acepto los términos y condiciones:</label>
+                <input type="checkbox" id="aceptar" name="aceptar" value="si" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <p>La casilla de verificación se usa cuando se quiere que el usuario acepte o confirme algo, como los términos y condiciones. El atributo <code>required</code> asegura que el usuario debe marcarla para continuar.</p>
+        </section>
+    
+        <section>
+            <h3>9. Formulario con un botón de envío</h3>
+            <form action="procesar.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <p>El botón de envío, creado con la etiqueta <code>&lt;button&gt;</code>, envía el formulario al servidor para ser procesado.</p>
+        </section>
+    
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </article>
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <article id="tablas">
+        <h2>Tablas en HTML</h2>
+        <p>Las tablas en HTML se crean utilizando la etiqueta <code>&lt;table&gt;</code>, junto con otras etiquetas como <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code> y <code>&lt;td&gt;</code> para definir las filas, los encabezados de columna y las celdas de la tabla, respectivamente.</p>
+    
+        <h3>1. Estructura Básica de una Tabla</h3>
+        <p>Una tabla básica en HTML está compuesta por la etiqueta <code>&lt;table&gt;</code>, que contiene las etiquetas <code>&lt;tr&gt;</code> (fila de la tabla), <code>&lt;th&gt;</code> (encabezado de columna) y <code>&lt;td&gt;</code> (celda de datos).</p>
+    
+        <pre><code>
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Encabezado 1&lt;/th&gt;
+            &lt;th&gt;Encabezado 2&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Dato 1&lt;/td&gt;
+            &lt;td&gt;Dato 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+        </code></pre>
+    
+        <p>El código anterior crea una tabla con dos columnas (Encabezado 1 y Encabezado 2) y una fila con datos (Dato 1 y Dato 2).</p>
+    
+        <h3>2. Explicación de las Etiquetas de la Tabla</h3>
+        <ul>
+            <li><strong><code>&lt;table&gt;</code>:</strong> Define el contenedor de la tabla.</li>
+            <li><strong><code>&lt;tr&gt;</code>:</strong> Representa una fila dentro de la tabla.</li>
+            <li><strong><code>&lt;th&gt;</code>:</strong> Representa una celda de encabezado, generalmente utilizada para los títulos de las columnas. Por defecto, el texto dentro de <code>&lt;th&gt;</code> aparece en negrita y centrado.</li>
+            <li><strong><code>&lt;td&gt;</code>:</strong> Representa una celda de datos dentro de una fila. Contiene el contenido de la tabla.</li>
+        </ul>
+    
+        <h3>3. Ejemplo de una Tabla Completa</h3>
+        <p>A continuación, se muestra un ejemplo de una tabla con varias filas y columnas, incluyendo tanto datos como encabezados:</p>
+    
+        <pre><code>
+    &lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nombre&lt;/th&gt;
+            &lt;th&gt;Edad&lt;/th&gt;
+            &lt;th&gt;Profesión&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Juan&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+            &lt;td&gt;Ingeniero&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;María&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;Diseñadora&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Carlos&lt;/td&gt;
+            &lt;td&gt;28&lt;/td&gt;
+            &lt;td&gt;Médico&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+        </code></pre>
+    
+        <p>En este ejemplo, la tabla tiene tres columnas: Nombre, Edad y Profesión, y tres filas de datos.</p>
+    
+        <h3>4. Personalización de Tablas con Atributos</h3>
+        <p>Existen varios atributos que puedes usar para personalizar la apariencia de las tablas, como <code>border</code>, <code>cellspacing</code>, <code>cellpadding</code> y <code>width</code>.</p>
+    
+        <ul>
+            <li><strong><code>border</code>:</strong> Define el grosor del borde de la tabla.</li>
+            <li><strong><code>cellspacing</code>:</strong> Define el espacio entre las celdas de la tabla.</li>
+            <li><strong><code>cellpadding</code>:</strong> Define el espacio dentro de cada celda (margen entre el borde de la celda y el contenido).</li>
+            <li><strong><code>width</code>:</strong> Define el ancho de la tabla o las celdas.</li>
+        </ul>
+    
+        <p>A continuación, te mostramos un ejemplo de cómo agregar estos atributos:</p>
+    
+        <pre><code>
+    &lt;table border="1" cellspacing="5" cellpadding="10" width="100%"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Producto&lt;/th&gt;
+            &lt;th&gt;Precio&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Café&lt;/td&gt;
+            &lt;td&gt;$3.00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Té&lt;/td&gt;
+            &lt;td&gt;$2.50&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+        </code></pre>
+    
+        <p>En este ejemplo, hemos añadido un borde, espacio entre celdas, relleno dentro de las celdas y un ancho del 100% de la tabla.</p>
+    
+        <h3>5. Ejemplo de tabla</h3>
+        <p>A continuación, te mostramos un ejemplo:</p>
+    
+        <table border="1" cellspacing="5" cellpadding="10" width="100%">
+            <tr>
+                <th>Banda</th>
+                <th>Género Musical</th>
+                <th>Discos</th>
+            </tr>
+            <tr>
+                <td>GammaRay</td>
+                <td>Power Metal</td>
+                <td>Insanity & genius, Powerplant, Land of the free</td>
+            </tr>
+            <tr>
+                <td>Pink Floyd</td>
+                <td>Rock Progresivo</td>
+                <td>The Dark Side of the Moon, The Wall</td>
+            </tr>
+            <tr>
+                <td>Iron Maiden</td>
+                <td>Heavy Metal</td>
+                <td>Iron Maiden, Somewhere in time, Powerslave</td>
+            </tr>
+            <tr>
+                <td>Queen</td>
+                <td>Rock</td>
+                <td>A Night at the Opera, News of the World, The Game</td>
+            </tr>
+        </table>
+        
+    
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </article>
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <article id="multimedia">
+        <h2>Contenido Multimedia</h2>
+        <p>HTML soporta audio y video con las etiquetas <code>&lt;audio&gt;</code> y <code>&lt;video&gt;</code>.</p>
+    
+        <section>
+            <h3>Etiquetas <code>&lt;audio&gt;</code> y <code>&lt;video&gt;</code></h3>
+            <p>Las etiquetas <code>&lt;audio&gt;</code> y <code>&lt;video&gt;</code> en HTML se utilizan para incorporar archivos de audio y video en una página web, ofreciendo controles para reproducir, pausar y ajustar el volumen, entre otras funcionalidades. Ambas etiquetas forman parte de HTML5 y son altamente versátiles.</p>
+    
+            <h4>Etiqueta <code>&lt;audio&gt;</code></h4>
+            <p>Se utiliza para insertar contenido de solo audio, como música o efectos de sonido.</p>
+            <h5>Ejemplo básico</h5>
+            <pre><code>&lt;audio controls&gt;
+        &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+        &lt;source src="audio.ogg" type="audio/ogg"&gt;
+        Tu navegador no soporta la reproducción de audio.
+    &lt;/audio&gt;</code></pre>
+    
+            <h5>Atributos comunes de <code>&lt;audio&gt;</code></h5>
+            <ul>
+                <li><strong>controls:</strong> Muestra controles de reproducción como play, pause y volumen.</li>
+                <li><strong>autoplay:</strong> El audio se reproduce automáticamente al cargar la página.</li>
+                <li><strong>loop:</strong> El audio se reproduce en bucle continuo.</li>
+                <li><strong>muted:</strong> Inicia el audio con el sonido silenciado.</li>
+                <li><strong>preload:</strong> Sugerencia sobre cómo cargar el audio:
+                    <ul>
+                        <li>auto: Carga completo el archivo al cargar la página.</li>
+                        <li>metadata: Carga solo la duración y otros metadatos.</li>
+                        <li>none: No carga el archivo hasta que el usuario lo reproduzca.</li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <h4>Etiqueta <code>&lt;video&gt;</code></h4>
+            <p>Se utiliza para incrustar contenido de video, y puede incluir subtítulos y controles personalizados.</p>
+            <h5>Ejemplo básico</h5>
+            <pre><code>&lt;video controls width="640" height="360"&gt;
+        &lt;source src="video.mp4" type="video/mp4"&gt;
+        &lt;source src="video.ogg" type="video/ogg"&gt;
+        Tu navegador no soporta la reproducción de video.
+    &lt;/video&gt;</code></pre>
+    
+            <h5>Atributos comunes de <code>&lt;video&gt;</code></h5>
+            <ul>
+                <li><strong>controls:</strong> Muestra controles como play, pause, barra de progreso y volumen.</li>
+                <li><strong>autoplay:</strong> El video se reproduce automáticamente al cargar la página.</li>
+                <li><strong>loop:</strong> El video se reproduce en bucle continuo.</li>
+                <li><strong>muted:</strong> Inicia el video con el sonido silenciado.</li>
+                <li><strong>poster:</strong> Define una imagen que se muestra antes de que se reproduzca el video.</li>
+                <li><strong>preload:</strong> Sugerencia para la carga del video (similar a <code>&lt;audio&gt;</code>).</li>
+            </ul>
+    
+            <h4>Subtítulos con <code>&lt;track&gt;</code></h4>
+            <p>Se puede añadir subtítulos, descripciones y otros metadatos a los videos mediante la etiqueta <code>&lt;track&gt;</code>.</p>
+            <h5>Ejemplo con subtítulos</h5>
+            <pre><code>&lt;video controls width="640" height="360"&gt;
+        &lt;source src="video.mp4" type="video/mp4"&gt;
+        &lt;track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español"&gt;
+        Tu navegador no soporta la reproducción de video.
+    &lt;/video&gt;</code></pre>
+    
+            <h5>Explicación de <code>&lt;track&gt;</code>:</h5>
+            <ul>
+                <li><strong>src:</strong> Ruta del archivo de subtítulos (formato .vtt).</li>
+                <li><strong>kind:</strong> Tipo de pista (e.g., subtitles, descriptions, captions).</li>
+                <li><strong>srclang:</strong> Idioma de los subtítulos (e.g., es para español, en para inglés).</li>
+                <li><strong>label:</strong> Texto que aparece para seleccionar los subtítulos.</li>
+            </ul>
+        </section>
+
+        <section style="text-align: center;">
+            <h3>Ejemplo Video Tipo Reel (Formato 9:16)</h3>
+            <video controls width="360" height="640" style="max-width: 100%; margin: 0 auto;" autoplay loop muted>
+                <source src="pasajemist.mp4" type="video/mp4">
+                <p>Tu navegador no soporta la reproducción de video.</p>
+            </video>
+        </section>
+        
+    
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </article>
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <article id="accesibilidad">
+        <h2>Accesibilidad en HTML</h2>
+        <p>HTML soporta atributos como <code>alt</code> y <code>aria-*</code> para hacer sitios más accesibles. La accesibilidad web se refiere a la práctica de diseñar y desarrollar sitios web de manera que sean accesibles para todas las personas, incluidas aquellas con discapacidades. A través de etiquetas y atributos semánticos, podemos hacer que nuestro contenido sea más comprensible y usable para todos los usuarios, incluidos aquellos que usan tecnologías de asistencia como lectores de pantalla.</p>
+    
+        <h3>Atributo <code>alt</code> en imágenes</h3>
+        <p>El atributo <code>alt</code> se usa en la etiqueta <code>&lt;img&gt;</code> para proporcionar una descripción alternativa de una imagen. Este atributo es crucial para usuarios con discapacidades visuales, ya que los lectores de pantalla leen el contenido de este atributo en lugar de mostrar la imagen.</p>
+        
+        <p>Ejemplo de uso:</p>
+        <figure>
+            <img src="imagen.jpg" alt="Un hermoso atardecer en la playa con colores cálidos.">
+            <figcaption>Descripción alternativa de la imagen.</figcaption>
+        </figure>
+    
+        <h3>Atributos <code>aria-*</code> para mejorar la accesibilidad</h3>
+        <p>Los atributos <code>aria-*</code> (Accessible Rich Internet Applications) son un conjunto de atributos que se pueden agregar a los elementos HTML para mejorar la accesibilidad, especialmente cuando se trabaja con contenido dinámico o interactivo.</p>
+    
+        <h4>Ejemplo de <code>aria-label</code></h4>
+        <p>El atributo <code>aria-label</code> proporciona una etiqueta accesible para los elementos interactivos. Esto es útil cuando el elemento no tiene una etiqueta visible o su etiqueta visual no describe adecuadamente su propósito.</p>
+        <button aria-label="Cerrar ventana">X</button>
+    
+        <h4>Ejemplo de <code>aria-hidden</code></h4>
+        <p>El atributo <code>aria-hidden</code> se usa para ocultar elementos a los lectores de pantalla. Esto es útil cuando tienes elementos decorativos que no deberían ser leídos por los lectores de pantalla.</p>
+        <div aria-hidden="true">
+            <img src="decoracion.jpg" alt="Elemento decorativo">
+        </div>
+    
+        <h4>Ejemplo de <code>aria-live</code></h4>
+        <p>El atributo <code>aria-live</code> se utiliza para indicar que un elemento se actualizará dinámicamente, lo que significa que el lector de pantalla debe anunciar los cambios a medida que ocurren.</p>
+        <div aria-live="polite">
+            <p>Este mensaje se actualizará sin interrumpir el flujo de lectura.</p>
+        </div>
+    
+        <h3>Ejemplo de <code>tabindex</code> para navegación por teclado</h3>
+        <p>El atributo <code>tabindex</code> permite controlar el orden de enfoque de los elementos en una página cuando el usuario navega con el teclado (con la tecla Tab). Un valor positivo indica el orden de tabulación. Un valor de "0" permite que el elemento siga el flujo normal de tabulación.</p>
+        
+        <p>Ejemplo de uso:</p>
+        <form>
+            <input type="text" tabindex="1" placeholder="Nombre">
+            <input type="email" tabindex="2" placeholder="Correo electrónico">
+            <input type="submit" tabindex="3" value="Enviar">
+        </form>
+    
+        <h3>Conclusión</h3>
+        <p>Implementar prácticas de accesibilidad en HTML es esencial para crear sitios web inclusivos que puedan ser utilizados por el mayor número de personas posible, independientemente de sus capacidades. El uso adecuado de atributos como <code>alt</code>, <code>aria-*</code>, <code>tabindex</code> y otros puede mejorar significativamente la experiencia de usuario para aquellos que dependen de tecnologías de asistencia.</p>
+    
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </article>
+    
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <aside id="contenidoextra">
+        <h2>Contenido extra: DOM, BOM, Web Storage, WebSockets, Web Components</h2>
+        <p>El DOM (Document Object Model) es una representación estructurada de un documento HTML o XML como un árbol de nodos. Es la interfaz que permite a los lenguajes de programación (como JavaScript) acceder y manipular los elementos de la página.</p>
+        
+        <h3>Características del DOM</h3>
+        <ul>
+            <li>Representa la estructura jerárquica de un documento.</li>
+            <li>Cada etiqueta HTML es un nodo en el árbol DOM.</li>
+            <li>Permite modificar el contenido, estilo y estructura de la página dinámicamente.</li>
+        </ul>
+    
+        <h4>Ejemplo de manipulación del DOM</h4>
+        <p id="demo">Texto original</p>
+        <button onclick="changeText()">Cambiar texto</button>
+    
+        <script>
+            function changeText() {
+                document.getElementById("demo").innerText = "Texto modificado";
+            }
+        </script>
+    
+        <h3>Funciones comunes del DOM</h3>
+        <ul>
+            <li><code>getElementById</code>: Selecciona un elemento por su ID.</li>
+            <li><code>querySelector</code>: Selecciona el primer elemento que coincide con un selector CSS.</li>
+            <li><code>createElement</code>: Crea un nuevo elemento.</li>
+            <li><code>appendChild</code>: Agrega un nodo hijo.</li>
+        </ul>
+    
+        <h2>BOM (Browser Object Model)</h2>
+        <p>El BOM es la representación de las funciones y objetos proporcionados por el navegador web para interactuar con el entorno fuera del documento HTML.</p>
+    
+        <h3>Elementos del BOM</h3>
+        <ol>
+            <li><code>window</code>: Es el objeto principal que representa la ventana del navegador.</li>
+            <li><code>navigator</code>: Proporciona información sobre el navegador y el sistema operativo.</li>
+            <li><code>screen</code>: Información sobre la resolución y dimensiones de la pantalla.</li>
+            <li><code>location</code>: Permite acceder o manipular la URL actual.</li>
+            <li><code>history</code>: Maneja el historial de navegación.</li>
+        </ol>
+    
+        <h4>Ejemplos del BOM</h4>
+        <pre>
+            // Mostrar la URL actual
+            console.log(window.location.href);
+    
+            // Redirigir a otra página
+            window.location.href = "https://www.google.com";
+    
+            // Mostrar el historial del navegador
+            console.log(window.history.length);
+        </pre>
+    
+        <h2>Web Storage</h2>
+        <p>El Web Storage permite almacenar datos en el navegador de manera local. Ofrece dos tipos de almacenamiento:</p>
+        <ul>
+            <li><code>localStorage</code>: Los datos persisten incluso después de cerrar el navegador.</li>
+            <li><code>sessionStorage</code>: Los datos se eliminan al cerrar la pestaña o ventana.</li>
+        </ul>
+    
+        <h4>Ejemplo con localStorage</h4>
+        <button onclick="saveData()">Guardar</button>
+        <button onclick="getData()">Recuperar</button>
+        <p id="output"></p>
+    
+        <script>
+            function saveData() {
+                localStorage.setItem("nombre", "Juan");
+                alert("Dato guardado");
+            }
+    
+            function getData() {
+                const nombre = localStorage.getItem("nombre");
+                document.getElementById("output").innerText = nombre ? `Hola, ${nombre}` : "No hay datos.";
+            }
+        </script>
+    
+        <h2>WebSockets</h2>
+        <p>Los WebSockets permiten establecer una comunicación bidireccional en tiempo real entre el navegador y un servidor. Son útiles para aplicaciones que requieren actualizaciones instantáneas, como chats, juegos en línea, o paneles de monitoreo.</p>
+    
+        <h3>Cómo funcionan los WebSockets</h3>
+        <ul>
+            <li>Se establece una conexión persistente entre el cliente y el servidor.</li>
+            <li>Tanto el cliente como el servidor pueden enviar y recibir mensajes en cualquier momento.</li>
+        </ul>
+    
+        <h4>Ejemplo básico de WebSocket</h4>
+        <pre>
+            const socket = new WebSocket("wss://echo.websocket.events");
+    
+            // Abrir conexión
+            socket.onopen = () => {
+                console.log("Conexión establecida");
+                socket.send("Hola, servidor");
+            };
+    
+            // Escuchar mensajes
+            socket.onmessage = (event) => {
+                console.log("Mensaje recibido:", event.data);
+            };
+    
+            // Manejar errores
+            socket.onerror = (error) => {
+                console.error("Error en la conexión:", error);
+            };
+    
+            // Cerrar conexión
+            socket.onclose = () => {
+                console.log("Conexión cerrada");
+            };
+        </pre>
+    
+        <h2>Web Components</h2>
+        <p>Los Web Components son una tecnología que permite crear elementos personalizados reutilizables con su propio comportamiento, estilo y funcionalidad. Son parte del estándar de HTML5.</p>
+    
+        <h3>Características principales</h3>
+        <ol>
+            <li><code>Custom Elements</code>: Definir nuevos elementos HTML personalizados.</li>
+            <li><code>Shadow DOM</code>: Encapsula el estilo y la funcionalidad de un componente para evitar conflictos con el resto de la página.</li>
+            <li><code>HTML Templates</code>: Permiten definir estructuras HTML reutilizables.</li>
+        </ol>
+    
+        <h4>Ejemplo de Web Component</h4>
+        <pre>
+            <template id="mi-componente">
+                <style>
+                    p {
+                        color: blue;
+                    }
+                </style>
+                <p>¡Hola desde un componente personalizado!</p>
+            </template>
+    
+            <script>
+                class MiComponente extends HTMLElement {
+                    constructor() {
+                        super();
+                        const template = document.getElementById("mi-componente").content;
+                        const shadow = this.attachShadow({ mode: "open" });
+                        shadow.appendChild(template.cloneNode(true));
+                    }
+                }
+    
+                customElements.define("mi-componente", MiComponente);
+            </script>
+    
+            <mi-componente></mi-componente>
+        </pre>
+    
+        <h2>Resumen</h2>
+        <table>
+            <tr>
+                <th>Tecnología</th>
+                <th>Propósito</th>
+            </tr>
+            <tr>
+                <td>DOM</td>
+                <td>Manipular la estructura del documento HTML.</td>
+            </tr>
+            <tr>
+                <td>BOM</td>
+                <td>Interactuar con el entorno del navegador.</td>
+            </tr>
+            <tr>
+                <td>Web Storage</td>
+                <td>Almacenar datos en el navegador de forma local o de sesión.</td>
+            </tr>
+            <tr>
+                <td>WebSockets</td>
+                <td>Comunicación bidireccional en tiempo real entre cliente y servidor.</td>
+            </tr>
+            <tr>
+                <td>Web Components</td>
+                <td>Crear elementos personalizados reutilizables y encapsulados.</td>
+            </tr>
+        </table>
+
+        <div id="volver-arriba">
+            <p><a href="#menu">Volver al Menú</a></p>
+        </div>
+    </aside>
+    
+</main>
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+<footer>
+    <p>© 2025 El HTML que se explica a sí mismo. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
